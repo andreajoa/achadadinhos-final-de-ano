@@ -1,0 +1,1287 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🎄 Achadinhos de Final de Ano - Presentes Incríveis!</title>
+    <meta name="description" content="Os melhores presentes de Natal da Amazon e Shopee! Produtos curados que todo mundo está amando 🎁">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&family=Fredoka:wght@400;500;600;700&family=Satisfy&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            /* Cores Natalinas Cozy */
+            --pine-green: #0d3b2e;
+            --forest-green: #1a5c42;
+            --warm-red: #8b1538;
+            --christmas-red: #c41e3a;
+            --cozy-gold: #d4af37;
+            --bright-gold: #f4d03f;
+            --snow-white: #fffef7;
+            --night-blue: #0a1628;
+            --deep-blue: #1e3a5f;
+            --fireplace-orange: #ff6b35;
+            --mint-ice: #a8e6cf;
+            
+            /* Gradientes */
+            --gradient-night: linear-gradient(180deg, #0a1628 0%, #1e3a5f 50%, #2d1b4e 100%);
+            --gradient-cozy: linear-gradient(135deg, #8b1538 0%, #c41e3a 50%, #ff6b35 100%);
+            --gradient-festive: linear-gradient(135deg, #0d3b2e 0%, #1a5c42 50%, #d4af37 100%);
+        }
+
+        body {
+            font-family: 'Quicksand', sans-serif;
+            background: var(--gradient-night);
+            min-height: 100vh;
+            overflow-x: hidden;
+            position: relative;
+            color: var(--snow-white);
+        }
+
+        /* Neve Caindo */
+        .snowflakes {
+            position: fixed;
+            top: -10px;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 1;
+            overflow: hidden;
+        }
+
+        .snowflake {
+            position: absolute;
+            top: -10px;
+            color: white;
+            font-size: 1em;
+            font-family: Arial, sans-serif;
+            text-shadow: 0 0 5px rgba(255, 255, 255, 0.8);
+            animation: fall linear infinite;
+            opacity: 0.8;
+        }
+
+        @keyframes fall {
+            0% { top: -10%; }
+            100% { top: 110%; }
+        }
+
+        .snowflake:nth-child(1) { left: 10%; animation-duration: 12s; animation-delay: 0s; font-size: 14px; }
+        .snowflake:nth-child(2) { left: 20%; animation-duration: 15s; animation-delay: 2s; font-size: 12px; }
+        .snowflake:nth-child(3) { left: 30%; animation-duration: 10s; animation-delay: 1s; font-size: 16px; }
+        .snowflake:nth-child(4) { left: 40%; animation-duration: 18s; animation-delay: 3s; font-size: 10px; }
+        .snowflake:nth-child(5) { left: 50%; animation-duration: 13s; animation-delay: 0.5s; font-size: 14px; }
+        .snowflake:nth-child(6) { left: 60%; animation-duration: 16s; animation-delay: 2.5s; font-size: 12px; }
+        .snowflake:nth-child(7) { left: 70%; animation-duration: 11s; animation-delay: 1.5s; font-size: 15px; }
+        .snowflake:nth-child(8) { left: 80%; animation-duration: 14s; animation-delay: 0s; font-size: 13px; }
+        .snowflake:nth-child(9) { left: 90%; animation-duration: 17s; animation-delay: 2s; font-size: 11px; }
+        .snowflake:nth-child(10) { left: 5%; animation-duration: 12s; animation-delay: 3.5s; font-size: 14px; }
+        .snowflake:nth-child(11) { left: 15%; animation-duration: 19s; animation-delay: 1s; font-size: 10px; }
+        .snowflake:nth-child(12) { left: 25%; animation-duration: 13s; animation-delay: 2.5s; font-size: 16px; }
+        .snowflake:nth-child(13) { left: 35%; animation-duration: 15s; animation-delay: 0s; font-size: 12px; }
+        .snowflake:nth-child(14) { left: 45%; animation-duration: 11s; animation-delay: 3s; font-size: 14px; }
+        .snowflake:nth-child(15) { left: 55%; animation-duration: 16s; animation-delay: 1.5s; font-size: 13px; }
+        .snowflake:nth-child(16) { left: 65%; animation-duration: 14s; animation-delay: 2s; font-size: 11px; }
+        .snowflake:nth-child(17) { left: 75%; animation-duration: 12s; animation-delay: 0.5s; font-size: 15px; }
+        .snowflake:nth-child(18) { left: 85%; animation-duration: 18s; animation-delay: 3s; font-size: 12px; }
+        .snowflake:nth-child(19) { left: 95%; animation-duration: 13s; animation-delay: 1s; font-size: 14px; }
+        .snowflake:nth-child(20) { left: 12%; animation-duration: 17s; animation-delay: 2.5s; font-size: 10px; }
+
+        /* Estrelas Piscando */
+        .stars {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        .star {
+            position: absolute;
+            width: 2px;
+            height: 2px;
+            background: white;
+            border-radius: 50%;
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+            animation: twinkle 3s ease-in-out infinite;
+        }
+
+        @keyframes twinkle {
+            0%, 100% { opacity: 0.3; }
+            50% { opacity: 1; }
+        }
+
+        .star:nth-child(1) { top: 10%; left: 20%; animation-delay: 0s; }
+        .star:nth-child(2) { top: 20%; left: 80%; animation-delay: 0.5s; }
+        .star:nth-child(3) { top: 30%; left: 40%; animation-delay: 1s; }
+        .star:nth-child(4) { top: 50%; left: 70%; animation-delay: 1.5s; }
+        .star:nth-child(5) { top: 60%; left: 30%; animation-delay: 2s; }
+        .star:nth-child(6) { top: 15%; left: 60%; animation-delay: 0.3s; }
+        .star:nth-child(7) { top: 70%; left: 50%; animation-delay: 1.8s; }
+        .star:nth-child(8) { top: 25%; left: 15%; animation-delay: 0.8s; }
+        .star:nth-child(9) { top: 80%; left: 85%; animation-delay: 2.3s; }
+        .star:nth-child(10) { top: 40%; left: 90%; animation-delay: 1.2s; }
+
+        /* Container */
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 30px 20px;
+            position: relative;
+            z-index: 2;
+        }
+
+        /* Loading Screen */
+        .loader {
+            position: fixed;
+            inset: 0;
+            background: var(--gradient-night);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            z-index: 9999;
+            transition: opacity 0.5s ease;
+        }
+
+        .loader-tree {
+            width: 100px;
+            height: 120px;
+            margin-bottom: 30px;
+            animation: treeGrow 2s ease-out infinite;
+        }
+
+        @keyframes treeGrow {
+            0%, 100% { transform: scale(1) rotate(0deg); }
+            50% { transform: scale(1.1) rotate(5deg); }
+        }
+
+        .loader-text {
+            font-family: 'Fredoka', cursive;
+            font-size: 1.5rem;
+            font-weight: 700;
+            background: linear-gradient(90deg, #d4af37, #f4d03f, #ff6b35, #c41e3a);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            animation: shimmer 2s linear infinite;
+            background-size: 200% auto;
+        }
+
+        @keyframes shimmer {
+            0% { background-position: 0% center; }
+            100% { background-position: 200% center; }
+        }
+
+        /* Header */
+        .header {
+            text-align: center;
+            margin-bottom: 60px;
+            padding: 60px 30px;
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border-radius: 30px;
+            border: 2px solid rgba(212, 175, 55, 0.3);
+            box-shadow: 
+                0 20px 60px rgba(0, 0, 0, 0.3),
+                inset 0 1px 0 rgba(255, 255, 255, 0.1);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 8px;
+            background: linear-gradient(90deg, 
+                #c41e3a 0%, 
+                #d4af37 25%, 
+                #0d3b2e 50%, 
+                #d4af37 75%, 
+                #c41e3a 100%);
+            animation: slideGarland 3s linear infinite;
+            background-size: 200% 100%;
+        }
+
+        @keyframes slideGarland {
+            0% { background-position: 0% 0%; }
+            100% { background-position: 200% 0%; }
+        }
+
+        .christmas-tree {
+            width: 80px;
+            height: 95px;
+            margin: 0 auto 25px;
+            animation: gentleSway 4s ease-in-out infinite;
+        }
+
+        @keyframes gentleSway {
+            0%, 100% { transform: rotate(-2deg); }
+            50% { transform: rotate(2deg); }
+        }
+
+        .hero-title {
+            font-family: 'Fredoka', cursive;
+            font-size: clamp(2rem, 6vw, 3.5rem);
+            font-weight: 700;
+            margin-bottom: 15px;
+            line-height: 1.2;
+            text-shadow: 0 2px 20px rgba(212, 175, 55, 0.4);
+        }
+
+        .hero-subtitle {
+            font-family: 'Satisfy', cursive;
+            font-size: clamp(1.3rem, 4vw, 2rem);
+            color: #d4af37;
+            margin-bottom: 20px;
+            text-shadow: 0 2px 15px rgba(212, 175, 55, 0.6);
+        }
+
+        .hero-description {
+            font-size: clamp(1rem, 2.5vw, 1.2rem);
+            font-weight: 500;
+            max-width: 700px;
+            margin: 0 auto 30px;
+            line-height: 1.6;
+            color: rgba(255, 255, 255, 0.9);
+        }
+
+        .hero-badges {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .badge {
+            padding: 10px 20px;
+            background: rgba(212, 175, 55, 0.2);
+            border: 2px solid rgba(212, 175, 55, 0.4);
+            border-radius: 25px;
+            font-size: 0.95rem;
+            font-weight: 600;
+            backdrop-filter: blur(5px);
+            transition: all 0.3s ease;
+        }
+
+        .badge:hover {
+            background: rgba(212, 175, 55, 0.3);
+            border-color: rgba(212, 175, 55, 0.6);
+            transform: scale(1.05);
+        }
+
+        .scroll-hint {
+            margin-top: 30px;
+            font-size: 2.5rem;
+            animation: bounce 2s ease-in-out infinite;
+        }
+
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+
+        /* Grid de Produtos */
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+            gap: 35px;
+            margin-bottom: 60px;
+        }
+
+        /* Card de Produto - Caixa de Presente */
+        .product-card {
+            background: rgba(255, 255, 255, 0.08);
+            backdrop-filter: blur(10px);
+            border-radius: 25px;
+            border: 2px solid rgba(255, 255, 255, 0.1);
+            padding: 30px 25px;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .product-card::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(212, 175, 55, 0.15) 0%, transparent 70%);
+            transform: translate(-50%, -50%) scale(0);
+            transition: transform 0.6s ease;
+            z-index: 0;
+        }
+
+        .product-card:hover::before {
+            transform: translate(-50%, -50%) scale(1);
+        }
+
+        .product-card:hover {
+            transform: translateY(-10px) scale(1.02);
+            border-color: rgba(212, 175, 55, 0.4);
+            box-shadow: 
+                0 20px 60px rgba(212, 175, 55, 0.3),
+                0 0 40px rgba(255, 255, 255, 0.1);
+        }
+
+        .gift-bow {
+            width: 60px;
+            height: 40px;
+            margin: 0 auto 20px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .gift-bow::before,
+        .gift-bow::after {
+            content: '';
+            position: absolute;
+            width: 30px;
+            height: 30px;
+            background: linear-gradient(135deg, #c41e3a, #ff6b35);
+            border-radius: 50% 50% 0 50%;
+            box-shadow: 0 4px 15px rgba(196, 30, 58, 0.4);
+        }
+
+        .gift-bow::before {
+            left: 0;
+            transform: rotate(-45deg);
+        }
+
+        .gift-bow::after {
+            right: 0;
+            transform: rotate(45deg);
+        }
+
+        .product-icon {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+            text-align: center;
+            filter: drop-shadow(0 4px 10px rgba(0, 0, 0, 0.3));
+            position: relative;
+            z-index: 1;
+        }
+
+        .product-title {
+            font-family: 'Fredoka', cursive;
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 15px;
+            color: #d4af37;
+            text-align: center;
+            text-shadow: 0 2px 10px rgba(212, 175, 55, 0.4);
+            position: relative;
+            z-index: 1;
+        }
+
+        .product-description {
+            font-size: 1.05rem;
+            font-weight: 500;
+            text-align: center;
+            margin-bottom: 20px;
+            color: rgba(255, 255, 255, 0.85);
+            line-height: 1.5;
+            position: relative;
+            z-index: 1;
+        }
+
+        .benefits {
+            list-style: none;
+            margin-bottom: 25px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .benefits li {
+            padding: 8px 0;
+            font-size: 0.95rem;
+            font-weight: 500;
+            color: rgba(255, 255, 255, 0.9);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .benefits li::before {
+            content: '✓';
+            color: #a8e6cf;
+            font-weight: 700;
+            font-size: 1.2rem;
+            min-width: 20px;
+        }
+
+        .buttons {
+            display: flex;
+            gap: 12px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .btn-store {
+            flex: 1;
+            padding: 14px 20px;
+            border: none;
+            border-radius: 15px;
+            font-family: 'Quicksand', sans-serif;
+            font-size: 1rem;
+            font-weight: 700;
+            color: white;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        .btn-store::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 0;
+            height: 0;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.2);
+            transform: translate(-50%, -50%);
+            transition: width 0.6s ease, height 0.6s ease;
+        }
+
+        .btn-store:hover::before {
+            width: 300px;
+            height: 300px;
+        }
+
+        .btn-store:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 25px rgba(0, 0, 0, 0.4);
+        }
+
+        .btn-store:active {
+            transform: scale(0.98);
+        }
+
+        .btn-amazon {
+            background: linear-gradient(135deg, #FF9900 0%, #FF6600 100%);
+        }
+
+        .btn-shopee {
+            background: linear-gradient(135deg, #EE4D2D 0%, #FF5722 100%);
+        }
+
+        /* Seção de Confiança */
+        .trust-section {
+            margin-bottom: 60px;
+        }
+
+        .trust-card {
+            background: rgba(255, 255, 255, 0.08);
+            backdrop-filter: blur(10px);
+            border-radius: 25px;
+            border: 2px solid rgba(212, 175, 55, 0.3);
+            padding: 40px 35px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+        }
+
+        .trust-icon {
+            font-size: 3rem;
+            text-align: center;
+            margin-bottom: 20px;
+            filter: drop-shadow(0 4px 10px rgba(212, 175, 55, 0.4));
+        }
+
+        .trust-card h3 {
+            font-family: 'Fredoka', cursive;
+            font-size: 1.8rem;
+            font-weight: 700;
+            text-align: center;
+            margin-bottom: 25px;
+            color: #d4af37;
+            text-shadow: 0 2px 10px rgba(212, 175, 55, 0.4);
+        }
+
+        .trust-items {
+            display: grid;
+            gap: 15px;
+            margin-bottom: 25px;
+        }
+
+        .trust-item {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 12px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 12px;
+            transition: all 0.3s ease;
+        }
+
+        .trust-item:hover {
+            background: rgba(255, 255, 255, 0.1);
+            transform: translateX(5px);
+        }
+
+        .check {
+            color: #a8e6cf;
+            font-weight: 700;
+            font-size: 1.3rem;
+            min-width: 25px;
+        }
+
+        .trust-disclaimer {
+            padding: 20px;
+            background: rgba(212, 175, 55, 0.1);
+            border-left: 4px solid #d4af37;
+            border-radius: 10px;
+            font-size: 0.95rem;
+            line-height: 1.6;
+            color: rgba(255, 255, 255, 0.9);
+        }
+
+        /* Footer */
+        .footer {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border-radius: 25px;
+            border: 2px solid rgba(212, 175, 55, 0.3);
+            padding: 40px 30px;
+            text-align: center;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .footer::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 6px;
+            background: linear-gradient(90deg, 
+                #c41e3a 0%, 
+                #d4af37 25%, 
+                #0d3b2e 50%, 
+                #d4af37 75%, 
+                #c41e3a 100%);
+        }
+
+        .footer-tree {
+            width: 60px;
+            height: 70px;
+            margin: 0 auto 20px;
+        }
+
+        .footer-message {
+            font-family: 'Satisfy', cursive;
+            font-size: 1.4rem;
+            color: #d4af37;
+            margin-bottom: 15px;
+            text-shadow: 0 2px 10px rgba(212, 175, 55, 0.4);
+        }
+
+        .footer-info {
+            font-size: 1.05rem;
+            font-weight: 600;
+            margin-bottom: 10px;
+            color: rgba(255, 255, 255, 0.9);
+        }
+
+        .footer-small {
+            font-size: 0.9rem;
+            color: rgba(255, 255, 255, 0.6);
+        }
+
+        /* Responsividade */
+        @media (max-width: 768px) {
+            .container {
+                padding: 20px 15px;
+            }
+
+            .header {
+                padding: 40px 20px;
+                margin-bottom: 40px;
+            }
+
+            .products-grid {
+                grid-template-columns: 1fr;
+                gap: 25px;
+            }
+
+            .buttons {
+                flex-direction: column;
+            }
+
+            .btn-store {
+                width: 100%;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .header {
+                padding: 30px 15px;
+            }
+
+            .product-card {
+                padding: 25px 20px;
+            }
+        }
+
+        /* Acessibilidade */
+        @media (prefers-reduced-motion: reduce) {
+            *, *::before, *::after {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+            }
+        }
+
+        .btn-store:focus {
+            outline: 3px solid #d4af37;
+            outline-offset: 3px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div class="loader" id="loader">
+        <svg class="loader-tree" viewBox="0 0 100 120">
+            <rect x="42" y="90" width="16" height="30" fill="#5D4037"/>
+            <polygon points="50,10 20,45 80,45" fill="#0d5c35"/>
+            <polygon points="50,35 15,65 85,65" fill="#1a7044"/>
+            <polygon points="50,55 10,90 90,90" fill="#267d4f"/>
+            <polygon points="50,0 52,8 60,8 54,12 56,20 50,15 44,20 46,12 40,8 48,8" fill="#FFD700"/>
+            <circle cx="30" cy="50" r="3" fill="#ff0000" opacity="0.8">
+                <animate attributeName="opacity" values="0.3;1;0.3" dur="1.5s" repeatCount="indefinite"/>
+            </circle>
+            <circle cx="70" cy="55" r="3" fill="#00ff00" opacity="0.8">
+                <animate attributeName="opacity" values="0.3;1;0.3" dur="1.5s" begin="0.5s" repeatCount="indefinite"/>
+            </circle>
+            <circle cx="50" cy="70" r="3" fill="#0000ff" opacity="0.8">
+                <animate attributeName="opacity" values="0.3;1;0.3" dur="1.5s" begin="1s" repeatCount="indefinite"/>
+            </circle>
+        </svg>
+        <div class="loader-text">Preparando os achadinhos...</div>
+    </div>
+
+    <!-- Neve Caindo -->
+    <div class="snowflakes" aria-hidden="true">
+        <div class="snowflake">❅</div>
+        <div class="snowflake">❆</div>
+        <div class="snowflake">❅</div>
+        <div class="snowflake">❆</div>
+        <div class="snowflake">❅</div>
+        <div class="snowflake">❆</div>
+        <div class="snowflake">❅</div>
+        <div class="snowflake">❆</div>
+        <div class="snowflake">❅</div>
+        <div class="snowflake">❆</div>
+        <div class="snowflake">❅</div>
+        <div class="snowflake">❆</div>
+        <div class="snowflake">❅</div>
+        <div class="snowflake">❆</div>
+        <div class="snowflake">❅</div>
+        <div class="snowflake">❆</div>
+        <div class="snowflake">❅</div>
+        <div class="snowflake">❆</div>
+        <div class="snowflake">❅</div>
+        <div class="snowflake">❆</div>
+    </div>
+
+    <!-- Estrelas -->
+    <div class="stars" aria-hidden="true">
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+    </div>
+
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <svg class="christmas-tree" viewBox="0 0 100 120">
+                <rect x="42" y="90" width="16" height="30" fill="#5D4037"/>
+                <polygon points="50,10 20,45 80,45" fill="#0d5c35"/>
+                <polygon points="50,35 15,65 85,65" fill="#1a7044"/>
+                <polygon points="50,55 10,90 90,90" fill="#267d4f"/>
+                <polygon points="50,0 52,8 60,8 54,12 56,20 50,15 44,20 46,12 40,8 48,8" fill="#FFD700"/>
+                <circle cx="25" cy="48" r="3" fill="#ff0000">
+                    <animate attributeName="opacity" values="0.3;1;0.3" dur="1.5s" repeatCount="indefinite"/>
+                </circle>
+                <circle cx="75" cy="52" r="3" fill="#00ff00">
+                    <animate attributeName="opacity" values="0.3;1;0.3" dur="1.5s" begin="0.5s" repeatCount="indefinite"/>
+                </circle>
+                <circle cx="50" cy="68" r="3" fill="#0000ff">
+                    <animate attributeName="opacity" values="0.3;1;0.3" dur="1.5s" begin="1s" repeatCount="indefinite"/>
+                </circle>
+                <circle cx="35" cy="60" r="2.5" fill="#FFD700">
+                    <animate attributeName="opacity" values="0.3;1;0.3" dur="1.5s" begin="0.3s" repeatCount="indefinite"/>
+                </circle>
+                <circle cx="65" cy="65" r="2.5" fill="#ff69b4">
+                    <animate attributeName="opacity" values="0.3;1;0.3" dur="1.5s" begin="0.8s" repeatCount="indefinite"/>
+                </circle>
+            </svg>
+            
+            <h1 class="hero-title">
+                🎄✨ ACHADINHOS DE FINAL DE ANO ✨🎄
+            </h1>
+            <p class="hero-subtitle">
+                Os Presentes Mais Amados da Amazon & Shopee
+            </p>
+            <div class="hero-description">
+                Produtos incríveis, selecionados com carinho para você arrasar nos presentes de Natal! 🎁
+            </div>
+            <div class="hero-badges">
+                <span class="badge">🔥 Mais Vendidos</span>
+                <span class="badge">⭐ Super Avaliados</span>
+                <span class="badge">🚚 Entrega Rápida</span>
+            </div>
+            <div class="scroll-hint">👇</div>
+        </header>
+
+        <!-- Grid de Produtos -->
+        <main class="products-grid">
+            <!-- Produto 1: Brinquedos Criativos -->
+            <div class="product-card">
+                <div class="gift-bow"></div>
+                <div class="product-icon">🎨</div>
+                <h3 class="product-title">Brinquedos Criativos</h3>
+                <p class="product-description">
+                    Para soltar a imaginação e criar momentos inesquecíveis
+                </p>
+                <ul class="benefits">
+                    <li>Estimula a criatividade</li>
+                    <li>Diversão garantida</li>
+                    <li>Qualidade comprovada</li>
+                </ul>
+                <div class="buttons">
+                    <a href="https://amzn.to/3IPTGuD" class="btn-store btn-amazon" target="_blank" rel="noopener">
+                        <span>🛒 Amazon</span>
+                    </a>
+                    <a href="https://s.shopee.com.br/5fgEuCn4kg" class="btn-store btn-shopee" target="_blank" rel="noopener">
+                        <span>🛍️ Shopee</span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Produto 2: Jogos Educativos -->
+            <div class="product-card">
+                <div class="gift-bow"></div>
+                <div class="product-icon">🧩</div>
+                <h3 class="product-title">Jogos Educativos</h3>
+                <p class="product-description">
+                    Aprender brincando nunca foi tão divertido!
+                </p>
+                <ul class="benefits">
+                    <li>Desenvolve raciocínio</li>
+                    <li>Diversão em família</li>
+                    <li>Alta durabilidade</li>
+                </ul>
+                <div class="buttons">
+                    <a href="https://amzn.to/3WN9GR6" class="btn-store btn-amazon" target="_blank" rel="noopener">
+                        <span>🛒 Amazon</span>
+                    </a>
+                    <a href="https://s.shopee.com.br/5pzf6OkrxM" class="btn-store btn-shopee" target="_blank" rel="noopener">
+                        <span>🛍️ Shopee</span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Produto 3: Kits de Diversão -->
+            <div class="product-card">
+                <div class="gift-bow"></div>
+                <div class="product-icon">🎁</div>
+                <h3 class="product-title">Kits de Diversão</h3>
+                <p class="product-description">
+                    Conjuntos completos para horas de entretenimento
+                </p>
+                <ul class="benefits">
+                    <li>Variedade incrível</li>
+                    <li>Ótimo custo-benefício</li>
+                    <li>Ideal para presentear</li>
+                </ul>
+                <div class="buttons">
+                    <a href="https://amzn.to/4nXOOCU" class="btn-store btn-amazon" target="_blank" rel="noopener">
+                        <span>🛒 Amazon</span>
+                    </a>
+                    <a href="https://s.shopee.com.br/LeiYBhlPh" class="btn-store btn-shopee" target="_blank" rel="noopener">
+                        <span>🛍️ Shopee</span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Produto 4: Brinquedos Sensoriais -->
+            <div class="product-card">
+                <div class="gift-bow"></div>
+                <div class="product-icon">🧸</div>
+                <h3 class="product-title">Brinquedos Sensoriais</h3>
+                <p class="product-description">
+                    Texturas e sons que encantam e acalmam
+                </p>
+                <ul class="benefits">
+                    <li>Estimulação sensorial</li>
+                    <li>Materiais seguros</li>
+                    <li>Muito divertido</li>
+                </ul>
+                <div class="buttons">
+                    <a href="https://amzn.to/48yo1bz" class="btn-store btn-amazon" target="_blank" rel="noopener">
+                        <span>🛒 Amazon</span>
+                    </a>
+                    <a href="https://s.shopee.com.br/4fnhi146HT" class="btn-store btn-shopee" target="_blank" rel="noopener">
+                        <span>🛍️ Shopee</span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Produto 5: Livros Interativos -->
+            <div class="product-card">
+                <div class="gift-bow"></div>
+                <div class="product-icon">📚</div>
+                <h3 class="product-title">Livros Interativos</h3>
+                <p class="product-description">
+                    Histórias que ganham vida nas mãos dos pequenos
+                </p>
+                <ul class="benefits">
+                    <li>Incentiva a leitura</li>
+                    <li>Ilustrações incríveis</li>
+                    <li>Educativo e divertido</li>
+                </ul>
+                <div class="buttons">
+                    <a href="https://amzn.to/4q9e4HM" class="btn-store btn-amazon" target="_blank" rel="noopener">
+                        <span>🛒 Amazon</span>
+                    </a>
+                    <a href="https://s.shopee.com.br/9pVnqx32Q3" class="btn-store btn-shopee" target="_blank" rel="noopener">
+                        <span>🛍️ Shopee</span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Produto 6: Arte & Pintura -->
+            <div class="product-card">
+                <div class="gift-bow"></div>
+                <div class="product-icon">🖌️</div>
+                <h3 class="product-title">Arte & Pintura</h3>
+                <p class="product-description">
+                    Kits completos para pequenos artistas
+                </p>
+                <ul class="benefits">
+                    <li>Desenvolve coordenação</li>
+                    <li>Kit completo</li>
+                    <li>Cores vibrantes</li>
+                </ul>
+                <div class="buttons">
+                    <a href="https://amzn.to/42EmtZF" class="btn-store btn-amazon" target="_blank" rel="noopener">
+                        <span>🛒 Amazon</span>
+                    </a>
+                    <a href="https://s.shopee.com.br/40Y0tscSky" class="btn-store btn-shopee" target="_blank" rel="noopener">
+                        <span>🛍️ Shopee</span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Produto 7: Blocos de Montar -->
+            <div class="product-card">
+                <div class="gift-bow"></div>
+                <div class="product-icon">🏗️</div>
+                <h3 class="product-title">Blocos de Montar</h3>
+                <p class="product-description">
+                    Construa mundos incríveis peça por peça
+                </p>
+                <ul class="benefits">
+                    <li>Estimula criatividade</li>
+                    <li>Infinitas possibilidades</li>
+                    <li>Resistente e seguro</li>
+                </ul>
+                <div class="buttons">
+                    <a href="https://amzn.to/4gYVpdn" class="btn-store btn-amazon" target="_blank" rel="noopener">
+                        <span>🛒 Amazon</span>
+                    </a>
+                    <a href="https://s.shopee.com.br/5pzf4i5Hjg" class="btn-store btn-shopee" target="_blank" rel="noopener">
+                        <span>🛍️ Shopee</span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Produto 8: Pelúcias Fofas -->
+            <div class="product-card">
+                <div class="gift-bow"></div>
+                <div class="product-icon">🐻</div>
+                <h3 class="product-title">Pelúcias Fofas</h3>
+                <p class="product-description">
+                    Companheiros macios para abraços aconchegantes
+                </p>
+                <ul class="benefits">
+                    <li>Super macias</li>
+                    <li>Design adorável</li>
+                    <li>Qualidade premium</li>
+                </ul>
+                <div class="buttons">
+                    <a href="https://amzn.to/4o6Hdl6" class="btn-store btn-amazon" target="_blank" rel="noopener">
+                        <span>🛒 Amazon</span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Produto 9: Quebra-Cabeças -->
+            <div class="product-card">
+                <div class="gift-bow"></div>
+                <div class="product-icon">🧩</div>
+                <h3 class="product-title">Quebra-Cabeças</h3>
+                <p class="product-description">
+                    Desafios que desenvolvem concentração e paciência
+                </p>
+                <ul class="benefits">
+                    <li>Diversos níveis</li>
+                    <li>Imagens encantadoras</li>
+                    <li>Excelente acabamento</li>
+                </ul>
+                <div class="buttons">
+                    <a href="https://amzn.to/48QymQ0" class="btn-store btn-amazon" target="_blank" rel="noopener">
+                        <span>🛒 Amazon</span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Produto 10: Instrumentos Musicais -->
+            <div class="product-card">
+                <div class="gift-bow"></div>
+                <div class="product-icon">🎵</div>
+                <h3 class="product-title">Instrumentos Musicais</h3>
+                <p class="product-description">
+                    Desperte o músico que existe em cada criança
+                </p>
+                <ul class="benefits">
+                    <li>Som de qualidade</li>
+                    <li>Fácil de usar</li>
+                    <li>Diversão musical</li>
+                </ul>
+                <div class="buttons">
+                    <a href="https://amzn.to/48XcYZk" class="btn-store btn-amazon" target="_blank" rel="noopener">
+                        <span>🛒 Amazon</span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Produto 11: Jogos de Tabuleiro -->
+            <div class="product-card">
+                <div class="gift-bow"></div>
+                <div class="product-icon">🎲</div>
+                <h3 class="product-title">Jogos de Tabuleiro</h3>
+                <p class="product-description">
+                    Diversão garantida para toda a família
+                </p>
+                <ul class="benefits">
+                    <li>Interação social</li>
+                    <li>Regras fáceis</li>
+                    <li>Muitas risadas</li>
+                </ul>
+                <div class="buttons">
+                    <a href="https://amzn.to/4mNMVap" class="btn-store btn-amazon" target="_blank" rel="noopener">
+                        <span>🛒 Amazon</span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Produto 12: Massinha de Modelar -->
+            <div class="product-card">
+                <div class="gift-bow"></div>
+                <div class="product-icon">🎨</div>
+                <h3 class="product-title">Massinha de Modelar</h3>
+                <p class="product-description">
+                    Crie formas e personagens sem limites
+                </p>
+                <ul class="benefits">
+                    <li>Cores vibrantes</li>
+                    <li>Não tóxico</li>
+                    <li>Fácil de modelar</li>
+                </ul>
+                <div class="buttons">
+                    <a href="https://amzn.to/42Z9Vfu" class="btn-store btn-amazon" target="_blank" rel="noopener">
+                        <span>🛒 Amazon</span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Produto 13: Carrinhos & Veículos -->
+            <div class="product-card">
+                <div class="gift-bow"></div>
+                <div class="product-icon">🚗</div>
+                <h3 class="product-title">Carrinhos & Veículos</h3>
+                <p class="product-description">
+                    Acelere a imaginação com esses clássicos
+                </p>
+                <ul class="benefits">
+                    <li>Detalhes realistas</li>
+                    <li>Resistente</li>
+                    <li>Diversão na pista</li>
+                </ul>
+                <div class="buttons">
+                    <a href="https://amzn.to/4pX3yDr" class="btn-store btn-amazon" target="_blank" rel="noopener">
+                        <span>🛒 Amazon</span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Produto 14: Fantasias & Acessórios -->
+            <div class="product-card">
+                <div class="gift-bow"></div>
+                <div class="product-icon">👑</div>
+                <h3 class="product-title">Fantasias & Acessórios</h3>
+                <p class="product-description">
+                    Vista-se de personagens e viva aventuras
+                </p>
+                <ul class="benefits">
+                    <li>Materiais confortáveis</li>
+                    <li>Designs autênticos</li>
+                    <li>Imaginação sem fim</li>
+                </ul>
+                <div class="buttons">
+                    <a href="https://amzn.to/4mTED0G" class="btn-store btn-amazon" target="_blank" rel="noopener">
+                        <span>🛒 Amazon</span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Produto 15: Ciência & Experimentos -->
+            <div class="product-card">
+                <div class="gift-bow"></div>
+                <div class="product-icon">🔬</div>
+                <h3 class="product-title">Ciência & Experimentos</h3>
+                <p class="product-description">
+                    Descubra o cientista que existe em você!
+                </p>
+                <ul class="benefits">
+                    <li>Aprendizado prático</li>
+                    <li>Seguro e educativo</li>
+                    <li>Experimentos incríveis</li>
+                </ul>
+                <div class="buttons">
+                    <a href="https://amzn.to/3IRV5kf" class="btn-store btn-amazon" target="_blank" rel="noopener">
+                        <span>🛒 Amazon</span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Produto 16: Bolas & Esportes -->
+            <div class="product-card">
+                <div class="gift-bow"></div>
+                <div class="product-icon">⚽</div>
+                <h3 class="product-title">Bolas & Esportes</h3>
+                <p class="product-description">
+                    Movimento, energia e muita diversão ao ar livre
+                </p>
+                <ul class="benefits">
+                    <li>Promove atividade física</li>
+                    <li>Durável</li>
+                    <li>Diversão garantida</li>
+                </ul>
+                <div class="buttons">
+                    <a href="https://amzn.to/4nG9MWN" class="btn-store btn-amazon" target="_blank" rel="noopener">
+                        <span>🛒 Amazon</span>
+                    </a>
+                </div>
+            </div>
+        </main>
+
+        <!-- Seção de Confiança -->
+        <section class="trust-section">
+            <div class="trust-card">
+                <div class="trust-content">
+                    <div class="trust-icon">🛡️</div>
+                    <h3>Por Que Confiar Nesta Seleção?</h3>
+                    <div class="trust-items">
+                        <div class="trust-item">
+                            <span class="check">✓</span>
+                            <span>Produtos com ótimas avaliações</span>
+                        </div>
+                        <div class="trust-item">
+                            <span class="check">✓</span>
+                            <span>Compra 100% segura via Amazon & Shopee</span>
+                        </div>
+                        <div class="trust-item">
+                            <span class="check">✓</span>
+                            <span>Entrega rastreada e confiável</span>
+                        </div>
+                        <div class="trust-item">
+                            <span class="check">✓</span>
+                            <span>Seleção atualizada semanalmente</span>
+                        </div>
+                    </div>
+                    <p class="trust-disclaimer">
+                        💙 <strong>Transparência:</strong> Este site contém links de afiliado Amazon e Shopee. 
+                        Você paga exatamente o mesmo preço e me ajuda a continuar trazendo os melhores achados! 
+                        Obrigada pelo apoio! 🙏✨
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="footer-content">
+                <svg class="footer-tree" viewBox="0 0 100 120">
+                    <rect x="42" y="90" width="16" height="30" fill="#5D4037"/>
+                    <polygon points="50,10 20,45 80,45" fill="#0d5c35"/>
+                    <polygon points="50,35 15,65 85,65" fill="#1a7044"/>
+                    <polygon points="50,55 10,90 90,90" fill="#267d4f"/>
+                    <polygon points="50,0 52,8 60,8 54,12 56,20 50,15 44,20 46,12 40,8 48,8" fill="#FFD700"/>
+                </svg>
+                <p class="footer-message">
+                    "Que este Natal seja cheio de amor, alegria e presentes que fazem sorrir! 💝"
+                </p>
+                <p class="footer-info">
+                    ✨ Achadinhos de Final de Ano - Atualizado semanalmente com os melhores produtos!
+                </p>
+                <p class="footer-small">
+                    Última atualização: Dezembro 2024
+                </p>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        // Loading screen
+        window.addEventListener('load', () => {
+            const loader = document.getElementById('loader');
+            setTimeout(() => {
+                loader.style.opacity = '0';
+                setTimeout(() => {
+                    loader.style.display = 'none';
+                    animateCards();
+                }, 500);
+            }, 1200);
+        });
+
+        // Animação das cards
+        function animateCards() {
+            const cards = document.querySelectorAll('.product-card');
+            cards.forEach((card, index) => {
+                card.style.opacity = '0';
+                card.style.transform = 'translateY(40px) scale(0.95)';
+                card.style.transition = `all 0.6s cubic-bezier(0.4, 0, 0.2, 1) ${index * 0.08}s`;
+                
+                setTimeout(() => {
+                    card.style.opacity = '1';
+                    card.style.transform = 'translateY(0) scale(1)';
+                }, 100 + (index * 80));
+            });
+        }
+
+        // Efeito de confetes ao clicar nos botões
+        document.querySelectorAll('.btn-store').forEach(btn => {
+            btn.addEventListener('click', (e) => {
+                createConfetti(btn);
+            });
+        });
+
+        function createConfetti(element) {
+            const colors = ['#d4af37', '#ff6b35', '#c41e3a', '#0d3b2e', '#a8e6cf'];
+            const rect = element.getBoundingClientRect();
+            const centerX = rect.left + rect.width / 2;
+            const centerY = rect.top + rect.height / 2;
+            
+            for (let i = 0; i < 12; i++) {
+                const confetti = document.createElement('div');
+                const color = colors[Math.floor(Math.random() * colors.length)];
+                const angle = (Math.PI * 2 * i) / 12;
+                const distance = 50 + Math.random() * 40;
+                const size = 6 + Math.random() * 6;
+                
+                confetti.style.cssText = `
+                    position: fixed;
+                    width: ${size}px;
+                    height: ${size}px;
+                    background: ${color};
+                    border-radius: ${Math.random() > 0.5 ? '50%' : '0'};
+                    left: ${centerX}px;
+                    top: ${centerY}px;
+                    pointer-events: none;
+                    z-index: 10000;
+                    box-shadow: 0 0 10px ${color};
+                `;
+                
+                const dx = Math.cos(angle) * distance;
+                const dy = Math.sin(angle) * distance;
+                const rotation = Math.random() * 720 - 360;
+                
+                document.body.appendChild(confetti);
+                
+                confetti.animate([
+                    { 
+                        transform: 'translate(0, 0) rotate(0deg) scale(1)', 
+                        opacity: 1 
+                    },
+                    { 
+                        transform: `translate(${dx}px, ${dy}px) rotate(${rotation}deg) scale(0)`, 
+                        opacity: 0 
+                    }
+                ], {
+                    duration: 800,
+                    easing: 'cubic-bezier(0.4, 0, 0.2, 1)'
+                }).onfinish = () => confetti.remove();
+            }
+        }
+
+        // Touch feedback para mobile
+        if ('ontouchstart' in window) {
+            document.querySelectorAll('.btn-store, .product-card').forEach(elem => {
+                elem.addEventListener('touchstart', function() {
+                    this.style.transform = this.classList.contains('btn-store') ? 
+                        'scale(0.95)' : 
+                        'translateY(-8px) scale(0.98)';
+                }, { passive: true });
+                
+                elem.addEventListener('touchend', function() {
+                    setTimeout(() => {
+                        this.style.transform = '';
+                    }, 150);
+                }, { passive: true });
+            });
+        }
+
+        // Efeito parallax suave no scroll
+        let ticking = false;
+        window.addEventListener('scroll', () => {
+            if (!ticking) {
+                window.requestAnimationFrame(() => {
+                    const scrolled = window.pageYOffset;
+                    const snowflakes = document.querySelector('.snowflakes');
+                    if (snowflakes) {
+                        snowflakes.style.transform = `translateY(${scrolled * 0.3}px)`;
+                    }
+                    ticking = false;
+                });
+                ticking = true;
+            }
+        });
+
+        // Log de sucesso
+        console.log('🎄 Achadinhos de Final de Ano - Carregado com sucesso! ✨');
+        console.log('🎁 Pronto para fazer conversões incríveis!');
+    </script>
+</body>
+</html>
